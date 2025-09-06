@@ -1,19 +1,37 @@
-# Accident-Severity-Prediction
+# Accident Severity Prediction Pipeline
 
-The goal is to help predict the severity of an accident based on various conditions. The original Data File came with various columns associated with the time of the accidents on I-95 and US-1 (such as windspeed and precipitation). However, the data was not usable just yet. So, that leads to Part 1: Cleaning the Data.
+This project leverages advanced data engineering and machine learning techniques to accurately predict accident severity based on a variety of environmental and temporal factors. The dataset includes detailed records of accidents along I-95 and US-1, featuring columns such as windspeed, precipitation, and timestamps. As a Data Engineer, my focus was on transforming raw, messy data into actionable insights through robust data pipelines and modeling.
 
-Part 1 Summary
+## Project Overview
 
-Part 1 was all about making the data useable, so this part involved the cleaning, transforming and converting of the various columns to the appropriate datatype (such as putting the Start and End time of an accident to a Date-Time format). After cleaning, I did a preliminary analysis of the data.
+**Objective:**  
+Develop a scalable pipeline to clean, analyze, and model accident data, enabling accurate severity predictions and supporting data-driven decision making for traffic safety.
 
-Part 2 Summary
+## Step 1: Data Engineering & Cleaning
 
-Before creating the model, I did a preliminary analysis of the data. This involved comparing accident severity and the amount of accidents to various condiditons in the form of various charts. For example, one of the most extensive charts involved comparing accident severity to all of the columns. Here are some general extrapolations from the analysis:
+The initial dataset required significant preprocessing. I engineered automated workflows to clean, transform, and convert columns to appropriate datatypes (e.g., parsing accident times to Date-Time format). This process ensured consistency and reliability for downstream analysis.
 
-The most amount of accidents happened on I-95 by a wide margin
-Accidents more frequently occured in the day in rainy and cloudy conditions
-Accidents occured the most in Miami compared to other cities
-Accidents occured mostly in the morning hours (7-9) or afternoon hours.(15-18)
-Part 3 Summary
+## Step 2: Exploratory Data Analysis
 
-After doing a preliminary analysis, I attempted three models: a logistic regression model, a random forest classifier and finally a gradient boosted classifier. I accounted for Multi-colinearity, Heteroskedasticity, and Endogenity and dealt with those issues accordingly. Following, I analyzed the highest rated model using feature importance, Partial Dependance Plots, and Shap values. Finally, I used feature selection to accuratly tune the model to increase the accuracy of the models.
+I performed comprehensive analyses to uncover key patterns, including:
+
+- I-95 experiences the highest accident frequency.
+- Daytime accidents are more common in rainy and cloudy conditions.
+- Miami reports the most accidents among cities studied.
+- Peak accident times occur during morning (7-9 AM) and afternoon (3-6 PM) hours.
+
+These insights were visualized through dynamic charts and dashboards, supporting rapid hypothesis testing and data exploration.
+
+## Step 3: Predictive Modeling
+
+I implemented and compared multiple machine learning models:
+
+- Logistic Regression
+- Random Forest Classifier
+- Gradient Boosted Classifier
+
+Throughout model development, I addressed issues such as multi-collinearity, heteroskedasticity, and endogeneity. Feature engineering and selection were used to optimize model accuracy. Model performance was evaluated using feature importance, partial dependence plots, and SHAP values.
+
+---
+
+**This pipeline demonstrates end-to-end data engineering, from raw data ingestion to impactful predictive analytics, empowering stakeholders to make informed decisions for traffic safety.**
